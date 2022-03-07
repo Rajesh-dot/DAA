@@ -31,6 +31,15 @@ int main(){
             }
         }
     }
+    for(int i=0;i<m;i++){
+        u=edges[i][0];
+        v=edges[i][1];
+        w=edges[i][2];
+        if(dist[v]!=10000 && dist[v]>dist[u]+w){
+            printf("There exists a negative");
+            return 0;
+        }
+    }
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
             if(i!=j){
